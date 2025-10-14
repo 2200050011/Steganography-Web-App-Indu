@@ -1,1 +1,35 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Steganography Secure Data Hiding</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script> <!-- For encryption -->
+</head>
+<body>
+    <h1>Steganography-Based Secure Data Hiding</h1>
+    
+    <h2>Encode Message</h2>
+    <form id="encodeForm">
+        <input type="file" id="imageInput" accept="image/*" required>
+        <textarea id="messageInput" placeholder="Enter secret message" required></textarea>
+        <input type="password" id="encryptionKey" placeholder="Encryption Key" required>
+        <button type="submit">Encode and Hide</button>
+    </form>
+    <div id="encodedImageContainer">
+        <img id="encodedImage" src="" alt="Encoded Image">
+        <a id="downloadLink" download="steganographed-image.png">Download Encoded Image</a>
+    </div>
+    
+    <h2>Decode Message</h2>
+    <form id="decodeForm">
+        <input type="file" id="encodedImageInput" accept="image/*" required>
+        <input type="password" id="decryptionKey" placeholder="Encryption Key" required>
+        <button type="submit">Decode and Extract</button>
+    </form>
+    <div id="decodedMessage"></div> <!-- To display the extracted message -->
+    
+    <script src="script.js"></script>
+</body>
+</html>
