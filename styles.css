@@ -1,0 +1,21 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+form {
+    margin-bottom: 20px;
+}
+textarea, input {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+}
+#encodedImage {
+    max-width: 400px;
+    margin-top: 10px;
+}
+#decodedMessage {
+    margin-top: 10px;
+    font-weight: bold;
+    color: green;
+}
