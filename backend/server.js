@@ -11,7 +11,7 @@ app.use(express.json());
 
 const upload = multer({ dest: "uploads/" });
 
-/* 🔐 ENCODE */
+/* ENCODE */
 app.post("/encode", upload.single("image"), async (req, res) => {
     try {
         const { message, key } = req.body;
@@ -49,7 +49,7 @@ app.post("/encode", upload.single("image"), async (req, res) => {
     }
 });
 
-/* 🔓 DECODE */
+/* DECODE */
 app.post("/decode", upload.single("image"), async (req, res) => {
     try {
         const { key } = req.body;
